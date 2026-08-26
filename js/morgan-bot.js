@@ -9,8 +9,8 @@
     companyName: 'Medical.MyAIworker.online',
 
     // Vapi public keys are designed for browser use.
-    vapiPublicKey: 'b300db1b-37d2-4af9-ac4d-77430e594542',
-    vapiAssistantId: '255d8fde-8607-450e-b4a6-89339947c619',
+    vapiPublicKey: '255d8fde-8607-450e-b4a6-89339947c619',
+    vapiAssistantId: '8cf8e138-db69-489f-bc4b-c94dcc1eaab3',
 
     teaserHide: 9000,
   };
