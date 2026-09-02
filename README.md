@@ -12,10 +12,12 @@ for doctors, dentists, and chiropractors.
 - The first recurring invoice is sent 30 days after go-live.
 - Service is month-to-month.
 - This website intentionally contains no public monthly-service payment link.
+- One-time implementation checkout: `https://buy.stripe.com/9B614o3lQfpVfMF7351kA0l`
 
 ## Morgan
 
-- Vapi AssistantID: `255d8fde-8607-450e-b4a6-89339947c619`
+- Vapi public key: `255d8fde-8607-450e-b4a6-89339947c619`
+- Vapi AssistantID: `8cf8e138-db69-489f-bc4b-c94dcc1eaab3`
 - Browser integration: `js/morgan-bot.js`
 - Morgan supports approved administrative workflows and does not provide
   diagnosis, treatment, clinical triage, or medical advice.

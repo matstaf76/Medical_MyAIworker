@@ -774,3 +774,62 @@ body::before {
 
   .footer-links { justify-content: flex-start; }
 }
+/* ── CALCULATORS, POLICY, AND SUPPORT PAGES ───────────────── */
+.time-calculator-section { background: linear-gradient(180deg, var(--clr-bg-2), var(--clr-bg)); }
+.time-calculator-shell { display: grid; gap: 1.5rem; margin-top: 2.5rem; }
+.time-calculator-form, .time-results, .plan-calculator, .roi-box, .policy-card { padding: clamp(1.15rem, 4vw, 2rem); border: 1px solid var(--clr-border); border-radius: var(--radius-lg); background: var(--clr-surface); box-shadow: var(--shadow-card); }
+.time-table-heading { display: flex; flex-direction: column; justify-content: space-between; gap: .75rem; margin-bottom: 1rem; }
+.time-table-heading h3, .time-recommendations h3, .roi-box h3 { color: var(--clr-white); font-family: var(--font-display); font-size: 1.4rem; text-transform: uppercase; }
+.time-table-heading p, .privacy-note, .conversation-note, .estimate-note, .roi-box p { color: var(--clr-text-muted); font-size: .84rem; }
+.time-table-key, .assist-rate { display: inline-flex; width: fit-content; padding: .3rem .55rem; border-radius: 999px; background: rgba(67,215,196,.12); color: var(--clr-amber); font-size: .78rem; font-weight: 800; text-transform: uppercase; }
+.time-task-table { width: 100%; border-collapse: collapse; }
+.time-task-table caption { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
+.time-task-table thead { display: none; }
+.time-task-table tbody { display: grid; gap: .8rem; }
+.time-task-table tbody tr, .time-task-table tfoot tr { display: block; padding: 1rem; border: 1px solid var(--clr-border); border-radius: var(--radius-md); background: var(--clr-bg-3); }
+.time-task-table th, .time-task-table td { display: block; text-align: left; }
+.time-task-table tbody th { padding-bottom: .65rem; color: var(--clr-white); }
+.time-task-table tbody td, .time-task-table tfoot td { display: grid; grid-template-columns: minmax(0,1fr) auto; align-items: center; gap: .75rem; padding: .55rem 0; border-bottom: 1px solid var(--clr-border); }
+.time-task-table td:last-child { border-bottom: 0; }
+.time-task-table td::before { content: attr(data-label); color: var(--clr-text-muted); font-size: .7rem; font-weight: 700; text-transform: uppercase; }
+.time-task-table tfoot { display: block; margin-top: .8rem; }
+.time-task-table input, .plan-calculator input, .plan-calculator select, .roi-box input { width: 100%; min-height: 46px; padding: .65rem .75rem; border: 1px solid var(--clr-border); border-radius: var(--radius-sm); background: var(--clr-bg); color: var(--clr-white); font: inherit; }
+.time-table-input, .currency-input { display: grid; grid-template-columns: 76px auto; align-items: center; gap: .5rem; }
+.time-table-input small, .currency-input small { color: var(--clr-text-muted); font-size: .72rem; white-space: nowrap; }
+.time-calculator-controls { display: grid; gap: 1rem; margin-top: 1.25rem; }
+.hourly-value { display: grid; gap: .7rem; padding: 1rem; border: 1px solid rgba(67,215,196,.35); border-radius: var(--radius-md); background: rgba(67,215,196,.08); }
+.currency-input { grid-template-columns: auto minmax(90px,1fr) auto; }
+.time-result-primary { display: block; margin-top: .4rem; color: var(--clr-amber); font-family: var(--font-display); font-size: clamp(2.2rem,7vw,4.3rem); line-height: .95; text-transform: uppercase; }
+.time-result-summary { margin-top: .9rem; }
+.time-metrics { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; margin-top: 1.4rem; }
+.time-metrics>div { padding: 1rem; border: 1px solid var(--clr-border); border-radius: var(--radius-md); background: var(--clr-bg-3); }
+.time-metrics span { display: block; color: var(--clr-text-muted); font-size: .72rem; text-transform: uppercase; }
+.time-metrics strong { color: var(--clr-white); font-family: var(--font-display); font-size: 1.6rem; }
+.time-recommendations { margin-top: 1.4rem; }
+.time-recommendations ol { display: grid; gap: .65rem; margin: .75rem 0 0 1.25rem; }
+.time-result-actions { display: flex; flex-direction: column; gap: .75rem; margin-top: 1.2rem; }
+.plan-calculator { display: grid; gap: 1.5rem; margin-top: 2rem; }
+.calculator-fields, .plan-calculator label, .roi-box { display: grid; gap: 1rem; }
+.plan-calculator label, .roi-box label { color: var(--clr-text); font-weight: 600; }
+.calculator-result { display: flex; flex-direction: column; align-items: flex-start; gap: .45rem; padding: 1.5rem; border-radius: var(--radius-md); background: var(--clr-bg-3); }
+.result-label { color: var(--clr-text-muted); font-size: .78rem; text-transform: uppercase; }
+.result-plan { color: var(--clr-amber); font-family: var(--font-display); font-size: clamp(1.6rem,5vw,2.3rem); }
+.roi-box { margin-top: 1.25rem; }
+.roi-result strong { color: var(--clr-amber); font-family: var(--font-display); font-size: 1.65rem; }
+.policy-main { position: relative; z-index: 1; padding-block: clamp(6.5rem,12vw,9rem) 4rem; }
+.policy-header { max-width: 780px; margin-bottom: 2rem; }
+.policy-header h1 { margin-top: .5rem; color: var(--clr-white); font-family: var(--font-display); font-size: clamp(2.6rem,8vw,5rem); line-height: .95; text-transform: uppercase; }
+.policy-header p { margin-top: 1rem; color: var(--clr-text-muted); }
+.policy-card { max-width: 900px; }
+.policy-section+.policy-section { margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--clr-border); }
+.policy-section h2 { color: var(--clr-white); font-family: var(--font-display); font-size: 1.65rem; text-transform: uppercase; }
+.policy-section h3 { margin-top: 1.15rem; color: var(--clr-white); }
+.policy-section p, .policy-section li { margin-top: .65rem; }
+.policy-section ul { margin-top: .65rem; padding-left: 1.25rem; list-style: disc; }
+.policy-callout { padding: 1rem 1.15rem; border: 1px solid rgba(67,215,196,.45); border-radius: var(--radius-md); background: rgba(67,215,196,.08); }
+.policy-callout strong { color: var(--clr-amber); }
+.support-grid { display: grid; gap: 1rem; margin-top: 1rem; }
+.support-card { padding: 1.15rem; border: 1px solid var(--clr-border); border-radius: var(--radius-md); background: var(--clr-bg-3); }
+.support-card h3 { margin-top: 0; }
+@media(min-width:760px){.time-task-table{display:table}.time-task-table thead{display:table-header-group}.time-task-table tbody{display:table-row-group}.time-task-table tfoot{display:table-footer-group}.time-task-table tbody tr,.time-task-table tfoot tr{display:table-row;padding:0;border:0;background:transparent}.time-task-table th,.time-task-table td{display:table-cell;padding:1rem;border-bottom:1px solid var(--clr-border);vertical-align:middle}.time-task-table tbody td,.time-task-table tfoot td{display:table-cell}.time-task-table td::before{content:none}.time-calculator-controls{grid-template-columns:minmax(0,1fr) auto}.support-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:900px){.time-calculator-shell{grid-template-columns:minmax(0,1.4fr) minmax(320px,.8fr);align-items:start}.plan-calculator{grid-template-columns:minmax(0,1fr) minmax(320px,.9fr)}}

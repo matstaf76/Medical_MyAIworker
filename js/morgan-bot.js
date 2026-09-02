@@ -125,6 +125,7 @@ patient details. What kind of practice do you run?"
   let vapiActive = false;
   let vapiLoading = false;
   let vapiModulePromise = null;
+  let introStarted = false;
 
   const $ = (id) => document.getElementById(id);
 
@@ -162,7 +163,7 @@ patient details. What kind of practice do you run?"
   function loadVapiModule() {
     if (!vapiModulePromise) {
       vapiModulePromise = import(
-        'https://cdn.jsdelivr.net/npm/@vapi-ai/web@2.5.2/+esm'
+        'https://cdn.jsdelivr.net/npm/@vapi-ai/web@2.6.1/+esm'
       ).catch(function (error) {
         vapiModulePromise = null;
         throw error;
@@ -396,6 +397,25 @@ patient details. What kind of practice do you run?"
     startVapiCall();
   };
 
+  function startFromIntro(event) {
+    if (introStarted) return;
+    introStarted = true;
+    if (event) event.preventDefault();
+
+    const intro = $('aiw-intro');
+    if (intro) {
+      intro.classList.add('aiw-intro-out');
+      intro.setAttribute('aria-hidden', 'true');
+      intro.setAttribute('tabindex', '-1');
+    }
+
+    window.aiwStartVoice();
+
+    if (intro) {
+      setTimeout(function () { intro.remove(); }, 450);
+    }
+  }
+
   window.aiwDismissVoice = function () {
     stopVapiCall();
 
@@ -465,11 +485,18 @@ patient details. What kind of practice do you run?"
     const send = $('aiw-send');
     const input = $('aiw-input');
     const voice = $('aiw-voice-btn');
+    const intro = $('aiw-intro');
 
     if (fab) fab.addEventListener('click', toggleWindow);
     if (teaser) teaser.addEventListener('click', toggleWindow);
     if (send) send.addEventListener('click', sendMessage);
     if (voice) voice.addEventListener('click', toggleVoice);
+    if (intro) {
+      intro.addEventListener('click', startFromIntro);
+      intro.addEventListener('keydown', function (event) {
+        if (event.key === 'Enter' || event.key === ' ') startFromIntro(event);
+      });
+    }
 
     if (input) {
       input.addEventListener('keydown', function (event) {
