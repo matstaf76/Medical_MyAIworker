@@ -5,8 +5,7 @@ for doctors, dentists, and chiropractors.
 
 ## Commercial structure
 
-- Limited-time implementation: **$2,500 through September 7, 2026**
-  (regularly $5,000).
+- Current implementation offer: **$2,500** (regularly $5,000; no end date on the site—confirm before publishing)
 - Recurring service: **$1,500/month for the first user** plus **$1,000/month for
   each additional user**.
 - The first recurring invoice is sent 30 days after go-live.
